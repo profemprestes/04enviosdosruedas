@@ -1,0 +1,51 @@
+{
+  "name": "Envíos DosRuedas - Mensajería y Logística Mar del Plata",
+  "short_name": "DosRuedas",
+  "description": "La solución logística y última milla de mayor confianza en Mar del Plata. Envíos Express, MercadoLibre Flex, ruteo eficiente y cadetería inteligente.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0950F6",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "lang": "es-AR",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "Cotizar Envío",
+      "short_name": "Cotizar",
+      "description": "Compará tu envío Express y LowCost en segundos",
+      "url": "/cotizar",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contacto",
+      "short_name": "Contacto",
+      "description": "Hablá con un asesor",
+      "url": "/contacto",
+      "icons": [{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

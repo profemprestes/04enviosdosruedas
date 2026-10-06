@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es" style=""><svg class="inline-defs-container" aria-hidden="true"
+  style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+  <title>Hero Contacto &amp; Base Logística - Envíos DosRuedas</title>
+  <!-- Google Fonts: Anton, Bebas Neue, Outfit, Geist Mono -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bebas+Neue&amp;family=Geist+Mono:wght@400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet">
+  <!-- Tailwind Play CDN con plugins oficiales -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue': {
+              50: '#E6EEFE',
+              100: '#BACEFD',
+              300: '#628FF9',
+              400: '#3570F8',
+              500: '#0950F6',
+              600: '#0950F6',
+              700: '#0950F6',
+              800: '#0950F6',
+              900: '#0950F6',
+            },
+            'brand-yellow': {
+              100: '#FFFAB8',
+              400: '#FFF12E',
+              500: '#FFEC01',
+              600: '#E6D400',
+            }
+          },
+          fontFamily: {
+            display: ['Anton', 'sans-serif'],
+            subheading: ['"Bebas Neue"', 'sans-serif'],
+            sans: ['Outfit', 'sans-serif'],
+            mono: ['"Geist Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'cta-glow': '0 0 25px rgba(255, 236, 1, 0.45)',
+            'glow-yellow': '0 0 20px rgba(255, 236, 1, 0.35)',
+            'glow-blue': '0 0 25px rgba(9, 80, 246, 0.35)',
+            'float': '0 12px 30px -4px rgba(9, 80, 246, 0.12)',
+            'antigravity-deep': '0 20px 40px -8px rgba(9, 80, 246, 0.18)',
+            'elevated': '0 10px 25px -5px rgba(9, 80, 246, 0.15)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Tipografía fluida y prevenciones móviles */
+    .fluid-title {
+      font-size: clamp(2rem, 5.5vw + 0.5rem, 4.5rem);
+      line-height: 0.95;
+    }
+
+    .fluid-subtitle {
+      font-size: clamp(1.2rem, 2.8vw + 0.2rem, 2.25rem);
+      line-height: 1.05;
+    }
+
+    .fluid-b2b-title {
+      font-size: clamp(1.85rem, 4vw + 0.5rem, 3.25rem);
+      line-height: 0.98;
+    }
+
+    /* Radar concéntrico animado */
+    @keyframes radar-pulse {
+      0% {
+        transform: scale(0.85);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(1.4);
+        opacity: 0;
+      }
+    }
+
+    .animate-radar-ring {
+      animation: radar-pulse 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+
+    /* Evitar zoom automático desagradable en iOS Safari garantizando 16px base en inputs */
+    @media (max-width: 640px) {
+
+      input,
+      select,
+      textarea {
+        font-size: 16px !important;
+      }
+    }
+  </style>
+</head>
+
+<body
+  class="bg-[#0950F6] text-white font-sans antialiased overflow-x-hidden selection:bg-[#FFEC01] selection:text-[#0950F6] flex flex-col min-h-screen">
+  <!-- Global Navigation Header con tope cromático reglamentario #0950F6 -->
+  <header
+    class="w-full bg-[#0950F6]/95 backdrop-blur-md border-b border-white/10 sticky top-0 z-50 transition-all duration-200">
+
+    <!-- Menú Desplegable Móvil -->
+    <div class="hidden md:hidden bg-[#0950F6] border-b border-white/15 px-4 pt-3 pb-6 space-y-3 transition-all"
+      id="mobile-menu">
+      <nav class="flex flex-col space-y-2 font-subheading text-lg tracking-wider uppercase">
+        <a class="px-3 py-2 rounded-lg text-white/90 hover:bg-white/10 hover:text-[#FFEC01] transition-colors"
+          href="#">Servicios</a>
+        <a class="px-3 py-2 rounded-lg text-white/90 hover:bg-white/10 hover:text-[#FFEC01] transition-colors"
+          href="#">Tarifas MDQ</a>
+        <a class="px-3 py-2 rounded-lg text-white/90 hover:bg-white/10 hover:text-[#FFEC01] transition-colors"
+          href="#">Fulfillment 3PL</a>
+        <a class="px-3 py-2 rounded-lg bg-white/10 text-[#FFEC01] font-bold" href="#">Contacto &amp; Base Friuli</a>
+      </nav>
+      <div class="pt-2 border-t border-white/15 text-xs font-mono text-white/80 flex items-center justify-between">
+        <span class="">BASE OPERATIVA MDQ</span>
+        <span class="text-[#FFEC01] font-bold">LUN A SÁB 08-20HS</span>
+      </div>
+    </div>
+  </header>
+  <!-- SECCIÓN HERO DE CONTACTO COMPLETO Y TOTALMENTE RESPONSIVE -->
+  <main
+    class="relative flex-1 w-full min-h-screen flex flex-col justify-between py-8 sm:py-12 lg:py-16 bg-[#0950F6] text-white overflow-x-clip">
+    <div aria-hidden="true"
+      class="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0">
+      <span
+        class="font-display uppercase text-[15vw] 2xl:text-[14vw] leading-none text-white/4 tracking-tighter whitespace-nowrap select-none">ENVÍOS
+        DOS RUEDAS</span></div>
+    <div aria-hidden="true"
+      class="absolute -top-32 -left-32 w-80 sm:w-96 2xl:w-125 h-80 sm:h-96 2xl:h-125 rounded-full pointer-events-none bg-[#FFEC01]/18 blur-[90px] sm:blur-[110px]">
+    </div>
+    <div aria-hidden="true"
+      class="absolute top-1/3 -right-32 w-80 sm:w-120 2xl:w-150 h-80 sm:h-120 2xl:h-150 rounded-full pointer-events-none bg-white/10 blur-[100px] sm:blur-[130px]">
+    </div>
+    <div aria-hidden="true"
+      class="absolute -bottom-40 left-1/4 w-80 sm:w-125 2xl:w-150 h-80 sm:h-125 2xl:h-150 rounded-full pointer-events-none bg-[#3570F8]/25 blur-[100px] sm:blur-[120px]">
+    </div><svg aria-hidden="true" class="absolute inset-0 w-full h-full opacity-[0.05] pointer-events-none"
+      xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern height="48" id="contact-procedural-grid" patternUnits="userSpaceOnUse" width="48">
+          <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#FFFFFF" stroke-dasharray="2,6" stroke-width="0.75"></path>
+          <circle cx="0" cy="0" fill="#FFEC01" r="1.5"></circle>
+        </pattern>
+      </defs>
+      <rect fill="url(#contact-procedural-grid)" height="100%" width="100%"></rect>
+    </svg><svg aria-hidden="true" class="absolute inset-0 w-full h-full opacity-20 pointer-events-none hidden sm:block"
+      preserveAspectRatio="none" viewBox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+      <path d="M -50 250 Q 350 450 750 200 T 1500 400" fill="none" stroke="#FFEC01" stroke-dasharray="10 14"
+        stroke-width="2"></path>
+      <circle cx="750" cy="200" fill="#FFEC01" r="4"></circle>
+      <circle cx="1200" cy="350" fill="#BACEFD" r="3"></circle>
+    </svg>
+    <div class="relative z-10 w-full px-6 sm:px-12 lg:px-16 2xl:px-24 my-auto flex flex-col justify-center flex-1">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 2xl:gap-20 items-center w-full">
+        <div class="lg:col-span-7 space-y-6 sm:space-y-8 w-full">
+          <div
+            class="inline-flex items-center gap-2 sm:gap-2.5 px-3.5 sm:px-4 py-1.5 rounded-full w-fit bg-white/10 backdrop-blur-md border border-[#FFEC01]/40 -rotate-1 shadow-glow-yellow">
+            <span class="relative flex h-2.5 w-2.5 shrink-0"><span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FFEC01] opacity-75"></span><span
+                class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FFEC01] shadow-[0_0_8px_#FFEC01]"></span></span><span
+              class="font-subheading text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#FFEC01]">Conexión
+              Directa · Mar del Plata 2026</span></div>
+          <h1 class="font-display uppercase tracking-tight text-white fluid-title w-full"><span
+              class="block">CONTACTO</span><span class="block">ASESORAMIENTO</span>
+            <font color="#0950f6"><span style="background-color: rgb(255, 236, 1);" class="inline-block px-2"><b>ENVIOS
+                  DOSRUEDAS</b></span></font><br><span
+              class="block fluid-subtitle text-white/95 tracking-normal font-sans font-bold mt-2">MAR DEL PLATA</span>
+          </h1>
+          <p class="max-w-2xl font-sans leading-relaxed text-base sm:text-lg lg:text-xl text-white/90 font-normal">Sin
+            formularios complejos ni esperas. Elegí el canal que mejor se adapte al ritmo de tu e-commerce o comercio
+            mayorista.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6 border-t border-white/20 w-full">
+            <div class="space-y-1"><span
+                class="font-subheading text-xs uppercase tracking-wider text-[#FFEC01] font-bold block">Oficina Central
+                &amp; Despacho</span>
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true"
+                  class="lucide lucide-map-pin w-4 h-4 text-[#FFEC01] shrink-0">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg><span class="font-mono text-xs sm:text-sm font-bold text-white tabular-nums">Friuli 1972,
+                  MDQ</span></div>
+            </div>
+            <div class="space-y-1"><span
+                class="font-subheading text-xs uppercase tracking-wider text-[#FFEC01] font-bold block">Operación &amp;
+                Salidas</span>
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" data-lucide="clock" aria-hidden="true"
+                  class="lucide lucide-clock w-4 h-4 text-[#FFEC01] shrink-0">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg><span class="font-mono text-xs sm:text-sm font-bold text-white tabular-nums">Lun a Vie 09 a 18 ·
+                  Sáb 10 a 15</span></div>
+            </div>
+            <div class="space-y-1"><span
+                class="font-subheading text-xs uppercase tracking-wider text-[#FFEC01] font-bold block">Flota
+                Activa</span>
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" data-lucide="shield-check" aria-hidden="true"
+                  class="lucide lucide-shield-check w-4 h-4 text-[#FFEC01] shrink-0">
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                  </path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg><span class="font-mono text-xs sm:text-sm font-bold text-white tabular-nums">100% Motos
+                  Propias</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 space-y-4 w-full"><a
+            class="group flex items-center justify-between p-4 sm:p-5 lg:p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-float hover:shadow-cta-glow hover:border-[#FFEC01] hover:bg-white/15 transition-all duration-200 active:scale-[.99] touch-manipulation min-h-18 sm:min-h-20.5 w-full"
+            href="https://wa.me/542236602699?text=Hola!%20Quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20mis%20env%C3%ADos."
+            rel="noopener noreferrer" target="_blank">
+            <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+              <div
+                class="inline-flex p-2.5 sm:p-3 rounded-xl bg-white/10 text-[#FFEC01] group-hover:bg-[#FFEC01] group-hover:text-[#0950F6] transition-colors duration-200 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  data-lucide="message-square" aria-hidden="true"
+                  class="lucide lucide-message-square w-6 h-6 sm:w-7 sm:h-7">
+                  <path
+                    d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z">
+                  </path>
+                </svg></div>
+              <div class="min-w-0"><span
+                  class="block font-display uppercase tracking-wide text-lg sm:text-xl lg:text-2xl text-white leading-tight mb-0.5 truncate">WhatsApp
+                  Comercial</span><span class="block font-sans text-xs sm:text-sm text-white/80 line-clamp-1">Respuestas
+                  y cotizaciones de envíos en tiempo real.</span></div>
+            </div>
+            <div
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center text-[#FFEC01] group-hover:bg-[#FFEC01] group-hover:text-[#0950F6] group-hover:translate-x-1 transition-all duration-200 shrink-0 ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg></div>
+          </a><a
+            class="group flex items-center justify-between p-4 sm:p-5 lg:p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-float hover:shadow-cta-glow hover:border-[#FFEC01] hover:bg-white/15 transition-all duration-200 active:scale-[.99] touch-manipulation min-h-18 sm:min-h-20.5 w-full"
+            href="tel:+542236602699">
+            <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+              <div
+                class="inline-flex p-2.5 sm:p-3 rounded-xl bg-white/10 text-[#FFEC01] group-hover:bg-[#FFEC01] group-hover:text-[#0950F6] transition-colors duration-200 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  data-lucide="phone" aria-hidden="true" class="lucide lucide-phone w-6 h-6 sm:w-7 sm:h-7">
+                  <path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                  </path>
+                </svg></div>
+              <div class="min-w-0"><span
+                  class="block font-display uppercase tracking-wide text-lg sm:text-xl lg:text-2xl text-white leading-tight mb-0.5 truncate">Llamada
+                  de Coordinación</span><span class="block font-sans text-xs sm:text-sm text-white/80 line-clamp-1">Para
+                  hablar directamente con un coordinador logístico.</span></div>
+            </div>
+            <div
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center text-[#FFEC01] group-hover:bg-[#FFEC01] group-hover:text-[#0950F6] group-hover:translate-x-1 transition-all duration-200 shrink-0 ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg></div>
+          </a><a
+            class="group flex items-center justify-between p-4 sm:p-5 lg:p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-float hover:shadow-cta-glow hover:border-[#FFEC01] hover:bg-white/15 transition-all duration-200 active:scale-[.99] touch-manipulation min-h-18 sm:min-h-20.5 w-full"
+            href="mailto:matiascejas@enviosdosruedas.com">
+            <div class="flex items-center gap-3.5 sm:gap-4 min-w-0">
+              <div
+                class="inline-flex p-2.5 sm:p-3 rounded-xl bg-white/10 text-[#FFEC01] group-hover:bg-[#FFEC01] group-hover:text-[#0950F6] transition-colors duration-200 shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  data-lucide="mail" aria-hidden="true" class="lucide lucide-mail w-6 h-6 sm:w-7 sm:h-7">
+                  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                </svg></div>
+              <div class="min-w-0"><span
+                  class="block font-display uppercase tracking-wide text-lg sm:text-xl lg:text-2xl text-white leading-tight mb-0.5 truncate">Solicitar
+                  Cotización B2B</span><span
+                  class="block font-sans text-xs sm:text-sm text-white/80 line-clamp-1">Envianos tu base de envíos para
+                  un plan personalizado.</span></div>
+            </div>
+            <div
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center text-[#FFEC01] group-hover:bg-[#FFEC01] group-hover:text-[#0950F6] group-hover:translate-x-1 transition-all duration-200 shrink-0 ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" aria-hidden="true" class="lucide lucide-arrow-right w-5 h-5">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg></div>
+          </a>
+          <div
+            class="p-3.5 sm:p-4 rounded-xl bg-[#0950F6] border border-white/20 flex items-center gap-3 shadow-inner w-full">
+            <div
+              class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#FFEC01]/20 flex items-center justify-center text-[#FFEC01] shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="zap"
+                aria-hidden="true" class="lucide lucide-zap w-4 h-4">
+                <path
+                  d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z">
+                </path>
+              </svg></div>
+            <p class="font-sans text-xs sm:text-sm text-white/85"><strong class="font-bold text-white">Respuesta
+                promedio en menos de 15 minutos</strong> durante horario de despacho activo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div aria-hidden="true" class="absolute bottom-0 left-0 right-0 h-1.5 bg-[#FFEC01] pointer-events-none"></div>
+  </main>
+  <!-- Script interactivo vanilla: Lucide, toggle menú móvil y submit de cotización -->
+  <script>
+    // Inicializar iconos
+    lucide.createIcons();
+
+    // Toggle Menú Móvil
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const toggleBtn = document.getElementById('mobile-menu-toggle');
+      const openIcon = document.getElementById('menu-icon-open');
+      const closeIcon = document.getElementById('menu-icon-close');
+
+      const isHidden = menu.classList.contains('hidden');
+      if (isHidden) {
+        menu.classList.remove('hidden');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        openIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        menu.classList.add('hidden');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    }
+
+    // Manejo de envío del cotizador
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('input-nombre').value;
+      const telefono = document.getElementById('input-telefono').value;
+      const volumen = document.getElementById('select-volumen').value;
+      const servicio = document.getElementById('select-servicio').value;
+
+      // Ocultar formulario y exhibir mensaje de confirmación
+      document.getElementById('quote-form').classList.add('hidden');
+      const successDiv = document.getElementById('form-success');
+      successDiv.classList.remove('hidden');
+
+      // Actualizar enlace directo a WhatsApp con parámetros codificados
+      const waLink = document.getElementById('whatsapp-direct-link');
+      const msg = `Hola! Solicité un plan a medida a nombre de ${nombre || 'mi comercio'} (Tel: ${telefono}) para ${volumen} envíos mensuales en modalidad ${servicio}.`;
+      waLink.href = `https://wa.me/542236602699?text=${encodeURIComponent(msg)}`;
+
+      // Volver a instanciar los iconos renderizados dinámicamente
+      lucide.createIcons();
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "browser-use": {
+      "source": "browser-use/browser-use",
+      "sourceType": "github",
+      "skillPath": "skills/browser-use/SKILL.md",
+      "computedHash": "d35bf6e89bb0c01d925dfb9bf2b7efb1f54d78a8ee41618be39549724135de86"
+    },
+    "open-source": {
+      "source": "browser-use/browser-use",
+      "sourceType": "github",
+      "skillPath": "skills/open-source/SKILL.md",
+      "computedHash": "fe53b85e8d5390c74fc57fd8278eb661037ef392be4cdb0b515d251c6217ad71"
+    },
+    "qa": {
+      "source": "browser-use/browser-use",
+      "sourceType": "github",
+      "skillPath": "skills/qa/SKILL.md",
+      "computedHash": "18c5131086331391bd3986e8607f92bc2ff43c24458dd0c557c45dbde6621d1a"
+    },
+    "remote-browser": {
+      "source": "browser-use/browser-use",
+      "sourceType": "github",
+      "skillPath": "skills/remote-browser/SKILL.md",
+      "computedHash": "61654ce8c238da96c0db1dda1e7517d1038bf69d0b2f8749d09af32ae110137c"
+    }
+  }
+}

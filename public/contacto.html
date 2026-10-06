@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>ENVÃOS DOSRUEDAS | Contacto &amp; Base Operativa Mar del Plata</title>
+  <!-- Fonts: Anton, Bebas Neue, Outfit, Geist Mono -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Bebas+Neue&amp;family=Geist+Mono:wght@400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Material Symbols Outlined -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-fixed-variant": "#3f4754",
+            "surface-container-highest": "#e2e2e2",
+            "inverse-primary": "#b7c4ff",
+            "on-primary": "#ffffff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#004bee",
+            "outline": "#737688",
+            "primary-fixed": "#dde1ff",
+            "primary": "#003cc1",
+            "surface-container-low": "#f3f3f4",
+            "primary-container": "#0950f6",
+            "error-container": "#ffdad6",
+            "primary-fixed-dim": "#b7c4ff",
+            "inverse-on-surface": "#f0f1f1",
+            "background": "#f9f9f9",
+            "tertiary-fixed-dim": "#bfc7d6",
+            "on-secondary-container": "#6d6400",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#2f3131",
+            "on-primary-fixed": "#001452",
+            "error": "#ba1a1a",
+            "outline-variant": "#c3c5d9",
+            "secondary-fixed": "#f8e600",
+            "on-secondary-fixed-variant": "#4e4800",
+            "tertiary": "#444c59",
+            "surface-dim": "#dadada",
+            "tertiary-fixed": "#dbe3f3",
+            "on-surface-variant": "#434656",
+            "surface-container-high": "#e8e8e8",
+            "tertiary-container": "#5c6471",
+            "on-background": "#1a1c1c",
+            "on-surface": "#1a1c1c",
+            "secondary-container": "#f5e300",
+            "on-secondary": "#ffffff",
+            "on-tertiary-container": "#d9e1f1",
+            "surface-bright": "#f9f9f9",
+            "on-primary-container": "#d9deff",
+            "secondary-fixed-dim": "#dac900",
+            "on-primary-fixed-variant": "#0038b7",
+            "surface-container": "#eeeeee",
+            "surface-variant": "#e2e2e2",
+            "on-secondary-fixed": "#1f1c00",
+            "on-tertiary-fixed": "#141c27",
+            "secondary": "#686000",
+            "surface": "#f9f9f9"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            margin: "1rem",
+            "space-xs": "0.25rem",
+            "gutter-desktop": "1.75rem",
+            "margin-tablet": "2rem",
+            "space-sm": "0.5rem",
+            gutter: "1.25rem",
+            "space-lg": "1.5rem",
+            "margin-desktop": "3rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            "display-hero": ["Anton"],
+            "body-md": ["Outfit"],
+            "data-mono-md": ["Geist Mono"],
+            "label-caps": ["Bebas Neue"],
+            "headline-md": ["Anton"],
+            "data-mono-sm": ["Geist Mono"],
+            "headline-sm": ["Anton"],
+            "action-md": ["Bebas Neue"],
+            "headline-lg": ["Anton"],
+            "action-lg": ["Bebas Neue"],
+            "body-lg": ["Outfit"],
+            "display-hero-mobile": ["Anton"],
+            "headline-lg-mobile": ["Anton"],
+            "body-sm": ["Outfit"],
+            "data-mono-lg": ["Geist Mono"]
+          },
+          fontSize: {
+            "display-hero": ["72px", { lineHeight: "76px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "body-md": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+            "data-mono-md": ["14px", { lineHeight: "20px", letterSpacing: "-0.01em", fontWeight: "500" }],
+            "label-caps": ["16px", { lineHeight: "18px", letterSpacing: "0.08em", fontWeight: "400" }],
+            "headline-md": ["32px", { lineHeight: "36px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "data-mono-sm": ["12px", { lineHeight: "16px", letterSpacing: "0em", fontWeight: "500" }],
+            "headline-sm": ["24px", { lineHeight: "28px", letterSpacing: "0.01em", fontWeight: "400" }],
+            "action-md": ["18px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "400" }],
+            "headline-lg": ["48px", { lineHeight: "52px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "action-lg": ["24px", { lineHeight: "24px", letterSpacing: "0.05em", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "display-hero-mobile": ["44px", { lineHeight: "48px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "headline-lg-mobile": ["32px", { lineHeight: "36px", letterSpacing: "0.02em", fontWeight: "400" }],
+            "body-sm": ["14px", { lineHeight: "22px", fontWeight: "500" }],
+            "data-mono-lg": ["20px", { lineHeight: "24px", letterSpacing: "-0.02em", fontWeight: "700" }]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0950F6;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #FFEC01;
+      border-radius: 4px;
+    }
+
+    .stripes-pattern {
+      background: repeating-linear-gradient(-45deg,
+          rgba(255, 236, 1, 0.15),
+          rgba(255, 236, 1, 0.15) 10px,
+          transparent 10px,
+          transparent 20px);
+    }
+  </style>
+</head>
+
+<body
+  class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-secondary-fixed selection:text-primary-container">
+  <!-- TOP HEADER (EXECUTES Shared Components JSON TopNavBar Spec with Tactical Overrides) -->
+  <!-- HERO SECTION: ASYMMETRIC 7/5 ON #0950F6 (min-h-[90dvh]) -->
+  <section
+    class="relative bg-primary-container min-h-[90dvh] flex items-center overflow-hidden py-space-xl border-b-4 border-secondary-fixed"
+    id="hero">
+    <!-- Atmospheric subtle road grid backdrop -->
+    <div class="absolute inset-0 stripes-pattern pointer-events-none opacity-30"></div>
+    <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-white/5 blur-3xl pointer-events-none"></div>
+    <div class="w-full px-margin md:px-margin-desktop max-w-screen-2xl mx-auto relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg md:gap-gutter-desktop items-center">
+        <!-- LEFT COLUMN (7 COLS) -->
+        <div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+          <!-- Tactical pill badge -->
+          <div
+            class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary-fixed text-primary-container font-label-caps text-label-caps tracking-widest shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+            <span>CONEXIÃ“N DIRECTA MAR DEL PLATA Â· 2026</span>
+          </div>
+          <!-- Monumental Anton Heading with -1deg Knockout Slab -->
+          <div class="flex flex-col">
+            <h1
+              class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-white tracking-tight uppercase leading-none">
+              CONTACTO &amp; BASE
+            </h1>
+            <div class="mt-1 md:mt-2 flex flex-wrap items-center gap-2">
+              <span
+                class="font-display-hero-mobile md:font-display-hero text-display-hero-mobile md:text-display-hero text-white tracking-tight uppercase leading-none">
+                LOGÃSTICA
+              </span>
+              <!-- Knockout yellow slab -->
+              <div class="inline-block transform -rotate-1 bg-secondary-fixed px-3 py-1 md:px-4 md:py-1.5 shadow-md">
+                <span
+                  class="font-headline-md md:font-headline-lg text-headline-md md:text-headline-lg text-primary-container uppercase tracking-tight block">
+                  MAR DEL PLATA Â· FRIULI 1972
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Subheadline in Outfit -->
+          <p class="font-body-lg text-body-lg text-white/90 max-w-2xl mt-1 leading-relaxed">
+            Sin formularios complejos ni esperas. Elegi­ el canal directo para coordinar envÃ­os con nuestra flota
+            propia en Mar del Plata.
+          </p>
+          <!-- Direct Action Channels (Glass on Blue) -->
+          <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-3 my-2">
+            <!-- WhatsApp Card -->
+            <a class="group p-3.5 rounded-xl bg-white/[0.07] border border-white/20 hover:border-secondary-fixed hover:bg-white/12 transition-all duration-150 flex flex-col justify-between"
+              href="https://wa.me/5492236602699" rel="noopener noreferrer" target="_blank">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-label-caps text-label-caps text-secondary-fixed uppercase">WHATSAPP COMERCIAL</span>
+                <span
+                  class="material-symbols-outlined text-secondary-fixed group-hover:translate-x-0.5 transition-transform text-lg">chat</span>
+              </div>
+              <div>
+                <span class="font-data-mono-md text-data-mono-md text-white font-bold block">+54 223 660-2699</span>
+                <span class="font-data-mono-sm text-data-mono-sm text-secondary-fixed block mt-0.5">Respuesta en &lt;3
+                  min</span>
+              </div>
+            </a>
+            <!-- TelÃ©fono de CoordinaciÃ³n -->
+            <a class="group p-3.5 rounded-xl bg-white/[0.07] border border-white/20 hover:border-secondary-fixed hover:bg-white/12 transition-all duration-150 flex flex-col justify-between"
+              href="tel:2236602699">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-label-caps text-label-caps text-white/80 uppercase">COORDINACIÃ“N</span>
+                <span
+                  class="material-symbols-outlined text-white/80 group-hover:text-secondary-fixed transition-colors text-lg">phone_in_talk</span>
+              </div>
+              <div>
+                <span class="font-data-mono-md text-data-mono-md text-white font-bold block">223 660-2699</span>
+                <span class="font-data-mono-sm text-data-mono-sm text-white/80 block mt-0.5">Guardia operativa
+                  vial</span>
+              </div>
+            </a>
+            <!-- Correo Oficial -->
+            <a class="group p-3.5 rounded-xl bg-white/[0.07] border border-white/20 hover:border-secondary-fixed hover:bg-white/12 transition-all duration-150 flex flex-col justify-between"
+              href="mailto:hola@enviosdosruedas.com">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-label-caps text-label-caps text-white/80 uppercase">CORREO CORPORATIVO</span>
+                <span
+                  class="material-symbols-outlined text-white/80 group-hover:text-secondary-fixed transition-colors text-lg">mail</span>
+              </div>
+              <div>
+                <span
+                  class="font-data-mono-sm text-data-mono-sm text-white font-bold truncate block">hola@enviosdosruedas.com</span>
+                <span class="font-data-mono-sm text-data-mono-sm text-white/80 block mt-0.5">Cuentas y 3PL B2B</span>
+              </div>
+            </a>
+          </div>
+          <!-- Primary CTA Button (Nested Pill) -->
+          <div class="flex flex-wrap items-center gap-space-md pt-2">
+            <a class="group inline-flex items-center justify-between gap-4 pl-6 pr-2 py-2.5 rounded-full bg-secondary-fixed hover:bg-brand-yellow-400 active:bg-brand-yellow-600 text-primary-container font-action-lg text-action-lg uppercase tracking-wider transition-all duration-150 active:translate-y-px shadow-lg"
+              href="https://wa.me/5492236602699" rel="noopener noreferrer" target="_blank">
+              <span>INICIAR CHAT POR WHATSAPP</span>
+              <span
+                class="w-10 h-10 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-xl">send</span>
+              </span>
+            </a>
+            <a class="px-5 py-3 rounded-full border-2 border-white/40 hover:border-secondary-fixed text-white font-action-md text-action-md tracking-wider uppercase hover:bg-white/10 transition-colors"
+              href="#cotizador">
+              FORMULARIO RÃPIDO
+            </a>
+          </div>
+          <!-- Factual Chips -->
+          <div class="flex flex-wrap items-center gap-2 pt-3 border-t border-white/15 w-full">
+            <span
+              class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white font-data-mono-sm text-data-mono-sm">
+              âœ“ FLOTA PROPIA HOMOLOGADA
+            </span>
+            <span
+              class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-secondary-fixed font-data-mono-sm text-data-mono-sm font-bold">
+              âš¡ TIEMPO MEDIO RESPUESTA: 2 MIN
+            </span>
+            <span
+              class="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white font-data-mono-sm text-data-mono-sm">
+              ðŸ“ BASE CENTRAL FRIULI 1972
+            </span>
+          </div>
+        </div>
+        <!-- RIGHT COLUMN (5 COLS): DOUBLE BEZEL TERMINAL RADAR -->
+        <div class="lg:col-span-5 relative mt-6 lg:mt-0">
+          <!-- Outer Bezel -->
+          <div
+            class="p-2.5 md:p-3 rounded-2xl bg-[#E6EEFE] border-2 border-[#BACEFD] shadow-2xl transform rotate-0 lg:rotate-1 hover:rotate-0 transition-transform duration-200">
+            <!-- Inner Payload Console -->
+            <div class="p-5 rounded-xl bg-white border border-[#BACEFD] text-primary-container flex flex-col gap-4">
+              <!-- Console Header Strip -->
+              <div class="flex items-center justify-between border-b-2 border-[#BACEFD] pb-3">
+                <div class="flex items-center gap-2">
+                  <span
+                    class="w-3.5 h-3.5 rounded-full bg-secondary-fixed border-2 border-primary-container animate-pulse"></span>
+                  <span class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider">RADAR DE
+                    DESPACHO MDP</span>
+                </div>
+                <span
+                  class="font-data-mono-sm text-data-mono-sm bg-primary-container text-secondary-fixed px-2 py-0.5 rounded font-bold">
+                  SISTEMA EN VIVO
+                </span>
+              </div>
+              <!-- Status Live Pill -->
+              <div class="p-3 rounded-lg bg-[#E6EEFE] border border-[#BACEFD] flex items-center justify-between">
+                <div>
+                  <span class="font-action-md text-action-md text-primary-container block">BASE OPERATIVA ACTIVA</span>
+                  <span class="font-data-mono-sm text-data-mono-sm text-[#3570F8]">Jornada en curso: 08:00 a 19:00
+                    hs</span>
+                </div>
+                <span class="w-3 h-3 rounded-full bg-secondary-fixed border-2 border-primary-container"></span>
+              </div>
+              <!-- Real-time metrics grid -->
+              <div class="grid grid-cols-2 gap-3 font-data-mono-sm text-data-mono-sm">
+                <div class="p-3 rounded-lg bg-white border border-[#BACEFD] flex flex-col">
+                  <span class="text-[#3570F8] text-[11px] uppercase tracking-wider">CADETES EN CALLE</span>
+                  <span class="font-headline-md text-headline-md text-primary-container mt-1">14 UNIDADES</span>
+                  <span class="text-primary-container text-[11px]">Motos &amp; Utilitarios Livianos</span>
+                </div>
+                <div class="p-3 rounded-lg bg-white border border-[#BACEFD] flex flex-col">
+                  <span class="text-[#3570F8] text-[11px] uppercase tracking-wider">RADIO COBERTURA</span>
+                  <span class="font-headline-md text-headline-md text-primary-container mt-1">100% MDP</span>
+                  <span class="text-primary-container text-[11px]">Gral. PueyrredÃ³n completo</span>
+                </div>
+              </div>
+              <!-- Simulated Dispatch Activity Feed -->
+              <div class="p-3 rounded-lg bg-white border border-[#BACEFD] flex flex-col gap-2">
+                <span
+                  class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider border-b border-[#BACEFD] pb-1">
+                  ÃšLTIMAS RUTAS ASIGNADAS (MDP)
+                </span>
+                <div
+                  class="flex items-center justify-between text-xs font-data-mono-sm py-1 border-b border-dashed border-[#BACEFD]">
+                  <span class="font-bold text-primary-container">#MDP-8842 [FLEX ML]</span>
+                  <span class="text-[#3570F8]">GÃ¼emes âž” ConstituciÃ³n</span>
+                  <span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-primary-container font-bold text-2xs">EN
+                    TRÃNSITO</span>
+                </div>
+                <div
+                  class="flex items-center justify-between text-xs font-data-mono-sm py-1 border-b border-dashed border-[#BACEFD]">
+                  <span class="font-bold text-primary-container">#MDP-8841 [URGENTE]</span>
+                  <span class="text-[#3570F8]">Puerto âž” Centro</span>
+                  <span
+                    class="px-1.5 py-0.5 rounded bg-primary-container text-white font-bold text-2xs">ENTREGADO</span>
+                </div>
+                <div class="flex items-center justify-between text-xs font-data-mono-sm py-1">
+                  <span class="font-bold text-primary-container">#MDP-8840 [ENCOMIENDA]</span>
+                  <span class="text-[#3570F8]">Base Friuli âž” Playa Grande</span>
+                  <span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-primary-container font-bold text-2xs">EN
+                    TRÃNSITO</span>
+                </div>
+              </div>
+              <!-- Direct Base Address Badge -->
+              <div
+                class="flex items-center gap-2 p-2 rounded-lg bg-primary-container text-white text-xs font-data-mono-sm">
+                <span class="material-symbols-outlined text-secondary-fixed text-lg">location_on</span>
+                <span>DESPACHO CENTRAL: Friuli 1972, B7600 Mar del Plata</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

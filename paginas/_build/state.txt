@@ -1,0 +1,69 @@
+﻿public: True
+paginas/paginas_html: True
+paginas/paginas_html files: 1
+--- paginas/ ---
+contacto.md
+cotizar.md
+home.md
+nosotros-nuestras-redes.md
+nosotros-preguntas-frecuentes.md
+nosotros-sobre-nosotros.md
+nosotros.md
+politica-de-privacidad.md
+README.md
+servicios-deposito-fulfillment.md
+servicios-empresas-cuenta-corriente.md
+servicios-envios-contrareembolso.md
+servicios-envios-express.md
+servicios-envios-lowcost.md
+servicios-enviosflex.md
+servicios-plan-emprendedores.md
+terminos-y-condiciones.md
+--- public top ---
+assets
+cards
+elementos
+heroes
+iconos
+img
+redes
+abstracto-background.jpg
+android-chrome-192x192.png
+android-chrome-512x512.png
+apple-touch-icon.png
+banner-servicio-flex.jpg
+bannerenvios.png
+bannerenvios.webp
+canvas_artwork.png
+card_mapa.webp
+componentes-actualizados.png
+contact-hero.html
+contacto.html
+delivery-background.jpg
+Emprendedoresbanner.webp
+Emprendedoresbannerrapidas.webp
+Emprendedoresbannerrapidas2.webp
+Emprendedoresbannerrapidas3.webp
+envios_logo.png
+express-hero-inline.png
+favicon-16x16.png
+favicon-96x96.png
+favicon.ico
+favicon.svg
+hero-background.jpeg
+llms-full.txt
+llms.txt
+logo-envios-simplified.webp
+logo-master.svg
+logo.png
+LogoEnviosDosRuedas-180.png
+LogoEnviosDosRuedas-192.png
+LogoEnviosDosRuedas-32.png
+LogoEnviosDosRuedas.png
+LogoEnviosDosRuedas.webp
+logo_.png
+logo_envios.svg
+manifest.json
+web-app-manifest-512x512.png
+--- html/img count ---
+115

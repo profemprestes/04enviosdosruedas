@@ -1,3 +1,3 @@
 @import "tailwindcss";
 @import "./globals.css";
-@source "../paginas_html/**/*.html";
+@source "../paginas_html/pilot.html";

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* NOTA: el `@import "tailwindcss"` lo provee input.css (build de mockups). */
 
 /* Tailwind CSS v4 Custom Variant */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -161,10 +161,12 @@
   /* ========================================================================
    * TIPOGRAFÍAS OFICIALES — Anton, Bebas Neue, Outfit, Geist Mono
    * ======================================================================== */
-  --font-sans: var(--font-sans, "Outfit"), "IBM Plex Sans", sans-serif;
-  --font-display: var(--font-display, "Anton SC"), "Anton", sans-serif;
-  --font-subheading: var(--font-subheading, "Bebas Neue"), sans-serif;
-  --font-mono: var(--font-mono, "Geist Mono"), monospace;
+  /* Font tokens literales (el original los inyectaba next/font sobre :root;
+     acá van directos para que no quede auto-referencia circular). */
+  --font-sans: "Outfit", "IBM Plex Sans", sans-serif;
+  --font-display: "Anton SC", "Anton", sans-serif;
+  --font-subheading: "Bebas Neue", sans-serif;
+  --font-mono: "Geist Mono", monospace;
 
   --text-2xs: 0.625rem;
   --text-xs: 0.75rem;

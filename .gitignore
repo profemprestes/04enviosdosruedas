@@ -1,1 +1,37 @@
+# ── Seguridad ───────────────────────────────────────────
+.env
+.env.*
+*.pem
+*.key
+
+# ── Dependencias ────────────────────────────────────────
+node_modules/
+.npm/
+.pnpm-store/
+
+# ── Cachés de build ─────────────────────────────────────
+.cache/
+.next/
+dist/
+
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# ── Logs y temporales ───────────────────────────────────
+*.log
+npm-debug.log*
+*.tmp
+*.temp
+*.bak
+
+# ── Editores y SO ───────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Config local de herramientas ────────────────────────
 mcp.json

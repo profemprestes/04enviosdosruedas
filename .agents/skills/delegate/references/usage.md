@@ -1,0 +1,142 @@
+# Antigravity / Gemini Managed Agents — reference
+
+Background detail for the `delegate` and `research` skills. The wrapper script is
+`scripts/antigravity.py`; it talks to the Gemini **Interactions API** via the
+`google-genai` SDK (declared as a PEP 723 inline dependency, installed on first
+`uv run`).
+
+## Authentication
+
+Set `GEMINI_API_KEY` (or `GOOGLE_API_KEY`) in the environment. No OAuth or service
+account is needed. The script aborts with a clear error if neither is present.
+
+## The underlying call
+
+The two agents have **opposite** `background` requirements (verified against the
+live API):
+
+```python
+from google import genai
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+
+# delegate: antigravity agent — background MUST be omitted; create() blocks until done.
+interaction = client.interactions.create(
+    agent="antigravity-preview-05-2026",
+    input="<prompt>",
+    tools=[{"type": "code_execution"}, {"type": "google_search"}, {"type": "url_context"}],
+    environment={"type": "remote"},   # omit "network" = open; "disabled" = no outbound
+    store=True,
+    timeout=7200,   # SECONDS; the SDK default is only 60s — far too short for sandbox work
+)
+print(interaction.output_text)
+
+# research: deep-research agent — background=True is REQUIRED; returns immediately,
+# then poll client.interactions.get(id, timeout=...) until status is terminal
+interaction = client.interactions.create(
+    agent="deep-research-preview-04-2026",
+    input="<question>",
+    agent_config={"type": "deep-research"},
+    background=True,
+    store=True,
+)
+```
+
+Execution model (single mode per kind): `delegate` and `research` both spawn a
+detached worker and the caller waits via the `wait` subcommand. The delegate worker
+blocks on the synchronous `create()`; the research worker polls `get()` until the
+server reports a terminal status. The detached worker survives an interrupted wait,
+so a run is always resumable via `status`.
+
+## Interaction status
+
+`interaction.status` is one of seven values (google-genai `Interaction.status` Literal):
+
+- **Active (keep polling):** `in_progress`, `requires_action`
+- **Terminal:** `completed` (the only success), `failed`, `cancelled`, `incomplete`, `budget_exceeded`
+
+There is no `done` flag or `is_terminal()` helper — callers compare the string. The
+worker polls until the status is in the terminal set, treating an empty status or any
+unrecognized value as "still working" (the worker deadline bounds a real hang), so a
+new active state the SDK adds is never mistaken for a finished run. Only `completed`
+maps to a local `completed` status; every other terminal state is recorded as `failed`
+with the server status in the error.
+
+## Agents
+
+| Agent | Use |
+|-------|-----|
+| `antigravity-preview-05-2026` | General task agent. Code execution, search, URL reading in a sandbox. Used by `delegate`. |
+| `deep-research-preview-04-2026` | Deep-research agent; manages its own browsing. Default for `research`, with `agent_config={"type": "deep-research"}`. |
+| `deep-research-max-preview-04-2026` | Max-mode deep research (slower, higher effort). Used by `research --max`. |
+
+## Tools (delegate, preview)
+
+- `code_execution` — Python / Bash / Node in `/workspace`.
+- `google_search` — web search via Google infra (works even with `--network none`).
+- `url_context` — fetch and read URLs (also unaffected by `--network none`).
+
+Not available in preview: function calling, MCP servers, file search, computer use,
+Google Maps, structured output / `response_format`.
+
+## Environment & network
+
+- `--network default` — sandbox code has open outbound access (e.g. `pip install`);
+  implemented by **omitting** the `network` field (the SDK `Network` enum is
+  `"disabled" | {allowlist: [...]}`, and omission means allow-all).
+- `--network none` — sandbox code has no outbound access (`network="disabled"`),
+  the safest option; search and URL tools still work because they run on Google infra.
+- `--repo URL` — mounts a GitHub repository at `/workspace/repo` via
+  `environment.sources`.
+- `--environment-id ID` — reuse an existing sandbox environment (from a previous run).
+- `--previous-interaction-id ID` — continue from a previous interaction in the same sandbox.
+- The sandbox TTL is unverified; it may persist for days but this is not guaranteed by the API.
+  When `environment_id` is reused, `/workspace` may persist across turns. The script reports
+  the `environment_id` in the result.
+
+## Multi-turn
+
+To continue in the same sandbox with prior context, use the `--environment-id` and
+`--previous-interaction-id` flags:
+
+```bash
+antigravity.py delegate --prompt "follow-up question" \
+  --environment-id <env-id> \
+  --previous-interaction-id <interaction-id>
+```
+
+The script reports both ids in the result output. The sandbox TTL is unverified; it may
+persist for days but this is not guaranteed by the API.
+
+## State layout
+
+Each run lives under `~/.antigravity/runs/<run-id>/` (override the base with
+`ANTIGRAVITY_HOME`):
+
+- `meta.json` — request + resolved `interaction_id` / `environment_id`
+- `status` — `starting` | `running` | `completed` | `failed`
+- `output.json` — structured result (output text, step counts, tool trace, usage)
+- `output.md` — rendered, human-readable result
+- `worker.err` — worker stderr for diagnostics
+
+## Subcommands
+
+```
+antigravity.py delegate --prompt "..." [--tools ...] [--network default|none] [--repo URL]
+antigravity.py research --query "..." [--max]
+antigravity.py wait    --run <id> [--interval 5] [--timeout 900]
+antigravity.py status  --run <id> [--full]
+```
+
+## Preview caveats
+
+Pre-GA as of mid-2026: no SLA, schema may change. `background` is required by the
+deep-research agent and rejected by the antigravity agent (so the worker branches on
+kind). `store=True` is sent on both. The `usage` namespace is flagged experimental by
+the SDK. Token usage is billed at the underlying model's rates.
+
+Timeout gotcha: the SDK's default per-request timeout is **60 seconds**, and the
+per-request `timeout=` kwarg is in **seconds** while `HttpOptions.timeout` is in
+**milliseconds** (opposite units). A synchronous `create()` blocks until the agent
+finishes, so the delegate worker passes an explicit multi-hour `timeout=` to keep
+long sandbox runs from aborting at the 60s default; the background research worker
+returns immediately and polls `get(..., timeout=...)` instead.
